@@ -1,0 +1,45 @@
+{
+	"French": [
+		"yo",
+		"hey",
+		"bonjour",
+		"bjr",
+		"bonsoir",
+		"salut",
+		"slt",
+		"salutation"
+	],
+	
+	"English": [
+		"hello",
+		"hi",
+		"good evening",
+		"good night"
+	],
+	
+	"Spanish": [
+		"hola",
+		"buenos dias",
+		"buenos noches",
+		"saludo"
+	],
+	
+	"German": [
+		"hallo",
+		"gru\u00df"
+	],
+	
+	"Japanese_ALPHA": [
+		"konichiwa",
+		"ohayo"
+	],
+	
+	"Japanese": [
+		"\u3053\u3093\u306b\u3061\u306f",
+		"\u304a\u306f\u3088\u3046"
+	],
+	
+	"Esperanto": [
+		"saluton"
+	]
+}
