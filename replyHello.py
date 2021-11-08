@@ -11,6 +11,7 @@ HELLO = [
 	"salut",
 	"slt",
 	"salutation",
+	"coucou",
 #English|_____________________|
 	"hello",
 	"hi",
