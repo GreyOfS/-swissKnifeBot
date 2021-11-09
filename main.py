@@ -1,7 +1,7 @@
 import discord
 import os
 
-from replyHello import isSayHello
+from replyHello import hello
 
 sk = discord.Client()
 
@@ -15,7 +15,7 @@ async def on_message(message):
 	if message.author == sk.user:
 		return
 
-	if isSayHello(message.content):
+	if hello.isSay(message.content):
 		print(f"👤╭─{message.author.name}\n📥╰─➤ \t{message.content}\n────────────────────")
 		await message.channel.send(f"Hello {message.author.mention}!")
 
