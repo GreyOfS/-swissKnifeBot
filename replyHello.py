@@ -1,39 +1,19 @@
 import re
 import json
 
-HELLO = [
-#Français|____________________|
-	"yo",
-	"hey",
-	"bonjour",
-	"bjr",
-	"bonsoir",
-	"salut",
-	"slt",
-	"salutation",
-	"coucou",
-#English|_____________________|
-	"hello",
-	"hi",
-	"good evening",
-	"good night",
-#Español|_____________________|
-	"hola",
-	"buenos dias",
-	"buenos noches",
-	"saludo",
-#Deutsch|_____________________|
-	"hallo",
-	"gruß",
-#Nihon|_______________________|
-	"konichiwa",
-	"ohayo",
-#日本|________________________|
-	"こんにちは",
-	"おはよう",
-#Esperanto|___________________|
-	"saluton"
-]
+##
+ # Gestion du dictionnaire des bonjour
+##
+class dict_hello:
+	dictionary = None
+	hello = []
+	
+	def __init__(self, file="hello.json"):
+		with open(file) as hello_file:
+			self.dictionary = json.load(hello_file)
+		for i in self.dictionary.values():
+			for j in i:
+				self.hello.append(j)
 
 ##
  #	Dit si la phrase dans la string est une salutaion à partire du dictionnaire HELLO
@@ -41,8 +21,9 @@ HELLO = [
  #	@return	bool
 ##
 def isSayHello(message):
-	isDetect = False	
-	for possibility in HELLO:
+	hello = dict_hello()
+	isDetect = False
+	for possibility in hello.hello:
 		if re.compile(r'\b({0})\b'.format(possibility), flags=re.IGNORECASE).search(message) != None:
 			isDetect = True
 			break
