@@ -7,7 +7,7 @@ sk = discord.Client()
 
 @sk.event
 async def on_ready():
-	print(f"We have logged in {sk.user}")
+	print(f"We have logged in {sk.user}\n────────────────────")
 
 @sk.event
 async def on_message(message):
