@@ -17,7 +17,8 @@ class dict_hello:
 
 class hello:
 	hello_dict = dict_hello()
-	def learn(self, string, language):
+
+	def learn(self, string, language): #v 0.1.0
 		if self.hello_dict.get(language) == None:
 			return 1
 		else:
