@@ -16,7 +16,7 @@ async def on_message(message):
 		return
 
 	if isSayHello(message.content):
-		print(f"╭─{message.author.name}\n╰─➤ \t{message.content}")
+		print(f"👤╭─{message.author.name}\n📥╰─➤ \t{message.content}")
 		await message.channel.send(f"Hello {message.author.mention}!")
 
 sk.run(os.environ['D_TOKEN'])
